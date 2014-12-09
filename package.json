@@ -1,0 +1,18 @@
+{
+  "name": "stormpath",
+  "version": "1.0.0",
+  "description": "stormpath test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles O",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.4",
+    "express-stormpath": "^0.5.6",
+    "forms": "^1.0.0",
+    "jade": "^1.8.1",
+    "xtend": "^4.0.0"
+  }
+}
