@@ -3,10 +3,8 @@ var stormpath = require('express-stormpath');
 
 var app = express();
 
-
 app.set('views', './views');
 app.set('view engine', 'jade');
-app.use('/profile',require('./profile')());
 
 var stormpathMiddleware = stormpath.init(app, {
   apiKeyFile: 'apiKey.properties',
@@ -17,6 +15,7 @@ var stormpathMiddleware = stormpath.init(app, {
 });
 
 app.use(stormpathMiddleware);
+app.use('/profile', require('./profile')());
 
 app.get('/', function(req, res) {
   res.render('home', {
